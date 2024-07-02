@@ -8,8 +8,10 @@ const orders=require('./routes/order');
 app.use('/api/v1/',products);
 app.use('/api/v1',orders);
 
-
+app.get('/', (req, res) => {
+    res.send('Website working fine');
+  });
 
 app.listen(3000,()=>{
-    console.log(`server listing to port 3000 in development dep}`)
+    console.log(`server listing to port 3000 in development}`)
 })
